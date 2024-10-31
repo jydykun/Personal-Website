@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    border: 2px solid rgb(224, 224, 224);
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.button p {
+    line-height: 50px;
+}
+
+.button-two {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+    border: 5px solid black;
+}
+
+.b {
+    border: 1px solid red !important
+}
+
+.btn {
+    position: relative;
+    background: none;
+    border: none;
+}
+
+.btn > a {
+    display: inline-block;
+    padding: 20px 30px;
+    color: red;
+    text-decoration: none;
+}
+
+.btn > svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

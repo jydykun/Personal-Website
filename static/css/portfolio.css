@@ -1,0 +1,138 @@
+:root {
+    --primary-color : #223030;
+    --secondary-color: #e8d9cd;
+    --third-color: #959d90;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+#s1,
+#s2 > div {
+    margin: 0 10rem;
+}
+
+#s1, #s2 {
+    display: flex;
+}
+
+#s1 > .nav-hover {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+#s1 > nav {
+    display: flex;
+    flex-flow: column;
+    margin: 3rem 0;
+    font-size: 2rem;
+    text-align: right;
+}
+
+#s1 > nav > a {
+    padding: 1.5rem 0;
+    transition: all 0.5s ease-in-out;
+}
+
+#s1 > nav > a:hover {
+    font-weight: 400;
+}
+
+#s2 {
+    flex-flow: column;
+    height: calc(100vh - 222px);
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+#s2 > div:first-child {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+#s2 > div:nth-child(2) {
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#s2 > div:first-child > p:first-child,
+#s2 > div:first-child > div {
+    font-size: 3rem;
+}
+
+#s2 > div:first-child > p:nth-child(2),
+text {
+    font-size: 10rem;
+    font-weight: 700;
+}
+
+#s2 > div:first-child > div {
+    overflow: hidden;
+}
+
+
+#s2 > div:nth-child(2) > p {
+    font-size: 2rem;
+}
+
+.name {
+    margin: 1rem 0
+}
+
+/* SVG Text Masking*/
+svg {
+    width: 45rem;
+    height: 8rem;
+}
+
+#text-mask text {
+    fill: white;
+}
+
+svg rect {
+    fill:var(--secondary-color);
+}
+
+svg circle {
+    fill:var(--third-color);
+}
+
+.nav-hover > p {
+    color: var(--third-color);
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: scaleY(0);
+    background-color: red;
+    z-index: 1;
+}
+
+.b {
+    border: 1px solid red;
+}

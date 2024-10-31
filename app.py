@@ -1,0 +1,18 @@
+from flask import Flask, render_template, jsonify
+
+names = ["Joseph","Cherish", "Abenasa", "Dugho"]
+
+app = Flask(__name__)
+
+@app.route("/")
+def welcome():
+    return render_template("welcome.html")
+
+@app.route("/api")
+def get_data():
+
+    data = [{
+        "name": name
+    }for name in names]
+
+    return jsonify(data)
