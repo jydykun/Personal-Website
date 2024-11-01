@@ -39,7 +39,7 @@ function nav_anim(){
 
 
     links.forEach(link => {
-        link.addEventListener("mouseenter", (e)=>{
+        link.addEventListener("pointerenter", (e)=>{
             
             const appearText = setText(e.target.textContent)
 
@@ -62,7 +62,7 @@ function nav_anim(){
             }
         })
 
-        link.addEventListener("mouseleave", (e)=>{
+        link.addEventListener("pointerleave", (e)=>{
 
 
             if(e.target.dataset.text === "welcome"){
@@ -166,7 +166,7 @@ function name_hover(){
         opacity: 0
     })
 
-    document.addEventListener("mousemove", (e)=>{
+    document.addEventListener("pointermove", (e)=>{
         const x = e.clientX - rect.x;
         const y = e.clientY - rect.y;
 
