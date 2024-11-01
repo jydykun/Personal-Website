@@ -1,4 +1,5 @@
-window.addEventListener("DOMContentLoaded",()=>{
+window.addEventListener("DOMContentLoaded", ()=>{
+    //Call the functions here
     nav_anim()
     title_anim(3)
     name_hover()
@@ -76,14 +77,44 @@ function nav_anim(){
         })
 
         link.addEventListener("click", (e)=>{
+            e.preventDefault() // Remove the default function of <a> element
             const cover = document.querySelector(".cover");
-            gsap.to(cover,{
+            const p = document.createElement("p");
+            p.textContent = e.target.textContent;
+            cover.appendChild(p)
+
+            gsap.set(p, {
+                opacity: 0
+            })
+
+            gsap.to(cover, {
                 duration: 0.8,
                 ease: "power4.out",
                 scaleY: 1,
                 onComplete: ()=>{
-                    window.location.href = "https://tailwindcss.com/docs/installation"
+                    if(e.target.dataset.text == "welcome"){
+                        setTimeout(()=>{
+                            window.location.href = "/"
+                        }, 1000)
+                    }
+                    else if(e.target.dataset.text == "projects"){
+                        setTimeout(()=>{
+                            window.location.href = "/projects"
+                        }, 1000)
+                    }
+                    else {
+                        setTimeout(()=>{
+                            console.log("ReachOut Page")
+                            //window.location.href = "/reachout"
+                        }, 1000)
+                    }
                 }
+            })
+
+            gsap.to(p, {
+                duration: 1,
+                opacity: 1,
+                delay: 0.5
             })
 
         })

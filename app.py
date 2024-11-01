@@ -8,11 +8,7 @@ app = Flask(__name__)
 def welcome():
     return render_template("welcome.html")
 
-@app.route("/api")
-def get_data():
+@app.route("/projects")
+def projects():
 
-    data = [{
-        "name": name
-    }for name in names]
-
-    return jsonify(data)
+    return render_template("projects.html")
