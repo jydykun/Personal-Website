@@ -138,6 +138,23 @@ svg circle {
     z-index: 1;
 }
 
+.design h2 {
+    font-size: 8rem;
+    text-align: center;
+}
+
+.design > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.design > div > div {
+    height: 100px;
+    width: 50%;
+    border: 1px solid red;
+}
+
 .b {
     border: 1px solid red;
 }
