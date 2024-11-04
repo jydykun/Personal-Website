@@ -168,12 +168,14 @@ svg circle {
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
+    color: var(--primary-color);
     background-color: var(--secondary-color);
 }
 
 .under-construction > svg {
     width: 250px;
     height: 250px;
+    fill: var(--primary-color)
 }
 
 .under-construction p {
