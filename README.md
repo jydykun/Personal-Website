@@ -1,6 +1,6 @@
 # Portfolio
  
- - This is my personal website utilizing JS GSAP Framework for animation and Python Flask for backend.
- - You can visit the site here: https://josephdugho.onrender.com/
-
- * The site takes time to load since I'm only using the free plan from render.com. Sorry for the inconvenience.
+- This is my personal website, built using JavaScript with the GSAP library for animations and Python Flask for the backend.
+- It also serves as a practice platform to refine my web programming skills.
+- You can check it out here: https://josephdugho.onrender.com.
+Please note that the site may take a bit to load as it’s hosted on a free plan from Render.com. Thank you for your patience!
