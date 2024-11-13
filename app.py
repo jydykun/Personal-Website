@@ -10,5 +10,8 @@ def welcome():
 
 @app.route("/projects")
 def projects():
-
     return render_template("projects.html")
+
+@app.route("/reachout")
+def reachout():
+    return render_template("reachout.html")

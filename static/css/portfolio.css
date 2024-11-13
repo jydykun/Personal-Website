@@ -19,6 +19,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     letter-spacing: 0.5rem;
+    overflow-x: hidden;
 }
 
 a {
@@ -135,12 +136,37 @@ svg circle {
     color: var(--primary-color);
     transform: scaleY(0);
     background-color: var(--secondary-color);
+    z-index: 10000;
+}
+
+.page {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+#return-btn {
+    position: fixed;
+    top: 3rem;
+    left: 3rem;
     z-index: 1;
 }
 
-.design h2 {
-    font-size: 8rem;
-    text-align: center;
+#return-btn > a {
+    display: inline-block;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+
+}
+
+#return-btn > a > svg {
+    width: 5rem;
+    height: 5rem;
+    stroke: var(--secondary-color);
+    transition: all 0.5s ease;
+}
+
+#return-btn > a:hover > svg {
+    transform: scale(0.8);
 }
 
 .design > div {
@@ -150,9 +176,13 @@ svg circle {
 }
 
 .design > div > div {
-    height: 100px;
     width: 50%;
-    border: 1px solid red;
+    overflow: hidden;
+}
+
+.design > div > div > img {
+    width: 100%;
+    height: 100%;
 }
 
 .under-construction {
