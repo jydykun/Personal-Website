@@ -124,7 +124,10 @@ function nav_anim(){
                 opacity: 0,
                 delay: 1
             })
-
+            tl.to(cover, {
+                opacity: 0,
+                delay: 2
+            })
         })
 
     });
