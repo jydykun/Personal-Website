@@ -52,6 +52,7 @@ const tooltip = ()=>{
     const p31 = document.querySelector(".p31");
     const p32 = document.querySelector(".p32");
     const p33 = document.querySelector(".p33");
+    const p34 = document.querySelector(".p34");
 
     // Create the shape that follows the mouse cursor
     function shape(color="#000000"){
@@ -149,9 +150,27 @@ const tooltip = ()=>{
     p28.addEventListener("mouseenter", ()=>toolTipAnim("MHA Tee", 150, 30, sec, contentColor, bgColor));
     p29.addEventListener("mouseenter", ()=>toolTipAnim("Naruto Tee", 180, 30, sec, contentColor, bgColor));
     p30.addEventListener("mouseenter", ()=>toolTipAnim("Minecraft Tee", 210, 30, sec, contentColor, bgColor));
-    p31.addEventListener("mouseenter", ()=>toolTipAnim("Web Development", 270, 30, sec, contentColor, bgColor));
-    p32.addEventListener("mouseenter", ()=>toolTipAnim("Web Development", 270, 30, sec, contentColor, bgColor));
-    p33.addEventListener("mouseenter", ()=>toolTipAnim("Web Development", 270, 30, sec, contentColor, bgColor));
+    p31.addEventListener("mouseenter", ()=>toolTipAnim("Landing Pages", 240, 30, sec, contentColor, bgColor));
+    p32.addEventListener("mouseenter", ()=>toolTipAnim("Landing Pages", 240, 30, sec, contentColor, bgColor));
+    p33.addEventListener("mouseenter", ()=>toolTipAnim("Landing Pages", 240, 30, sec, contentColor, bgColor));
+    p34.addEventListener("mouseenter", ()=>toolTipAnim("Landing Pages", 240, 30, sec, contentColor, bgColor));
+
+
+    // Link creation for the landing pages section
+
+    landingPagesSection = [p33, p34];
+    landingPagesSection.forEach(sect => {
+        sect.style.cursor = "pointer";
+    })
+
+    p33.addEventListener("click", ()=>{
+        window.open("https://the-coding-journal.onrender.com/", "_blank")
+    })
+
+
+    p34.addEventListener("click", ()=>{
+        window.open("https://tailwindcss.com/docs/background-image", "_blank")
+    })
 
     // Revert back to its original shape when leaving the container
     container.addEventListener("mouseleave", ()=>toolTipAnim("",10, 10, sec));
