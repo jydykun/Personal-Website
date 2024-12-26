@@ -169,7 +169,7 @@ const tooltip = ()=>{
 
 
     p34.addEventListener("click", ()=>{
-        window.open("https://tailwindcss.com/docs/background-image", "_blank")
+        window.open("https://snapbuy-mupq.onrender.com/", "_blank")
     })
 
     // Revert back to its original shape when leaving the container
